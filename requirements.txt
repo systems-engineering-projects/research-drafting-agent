@@ -1,0 +1,15 @@
+# LangGraph
+langgraph>=0.2.0
+
+# Search
+tavily-python>=0.5.0
+wikipedia>=1.4.0
+arxiv>=2.0.0
+
+# LLM + tracing
+langchain-openai>=0.2.0
+langchain-core>=0.3.0
+langsmith>=0.1.0
+
+# Config
+python-dotenv>=1.0.0
