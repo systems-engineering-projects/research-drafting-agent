@@ -1,6 +1,6 @@
 # Autonomous Research & Drafting Agent (LangGraph)
 
-A LangGraph-based agent that researches a topic (Tavily, Wikipedia, optional arXiv), critiques sources, summarizes, and drafts a short LinkedIn or email post—then pauses for **human approval** before persisting. Built to learn **state graphs**, **conditional edges**, **cycles**, and **human-in-the-loop** via `interrupt()`.
+A LangGraph-based agent that researches a topic (Tavily, Wikipedia, optional arXiv), critiques sources, summarizes, and drafts a short LinkedIn or email post—then pauses for **human approval** before persisting. Built to demonstrate **state graphs**, **conditional edges**, **cycles**, and **human-in-the-loop** via `interrupt()`.
 
 ## Flow
 
@@ -14,7 +14,7 @@ A LangGraph-based agent that researches a topic (Tavily, Wikipedia, optional arX
 8. **Resume**: CLI resumes with `Command(resume={...})`; graph routes to persist, back to draft, or end.
 9. **Persist**: Approved drafts are saved to SQLite (run ID, topic, sources, critique, summary, draft, approved_final).
 
-## What you learn (LangGraph)
+## What this demonstrates (LangGraph)
 
 - **State**: TypedDict state (`state.py`) passed through the graph and updated by each node.
 - **Conditional edges**: After `critique`, a routing function decides `need_more_sources` → search or `ok` → summarize (with `path_map`).
